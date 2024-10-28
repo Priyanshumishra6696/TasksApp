@@ -13,6 +13,15 @@ interface TaskDao {
     @Query("Select * from TaskEntity order by id")
     fun getAllTask() : LiveData<List<TaskEntity>>
 
+    @Query("select * from ListEntity order by listId")
+    fun getAllList() : LiveData<List<ListEntity>>
+
+    @Upsert
+    suspend fun addList(listEntity: ListEntity)
+
+    @Query("delete from ListEntity where listId=:listId")
+    suspend fun deleteList(listId : Int)
+
     @Upsert
     suspend fun addTask(TaskEntity:TaskEntity)
 

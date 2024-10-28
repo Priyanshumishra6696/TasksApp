@@ -226,7 +226,7 @@ fun GeneralPage(viewModel: TaskViewModel,page: Int) {
         ) {
             Text(
                 modifier = Modifier.padding(start = 16.dp, top = 8.dp),
-                text = viewModel.tabs[page],
+                text = "hey ya",
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.White
